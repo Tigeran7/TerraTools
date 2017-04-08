@@ -70,7 +70,7 @@ public class commands {
 				  if(freeze.hasMetadata(freeze.getName())){
 					  freezeToggle = false;
 					  freeze.removeMetadata(freeze.getName(), plugin);
-					  player.sendTitle("§aYou have been unfrozen.", "§eYou are free to go... for now...");
+					  player.sendTitle("Â§aYou have been unfrozen.", "Â§eYou're free to go... for now...");
 					  freeze.setFlySpeed(0.1f);
 					  freeze.setWalkSpeed(0.2f);
 					  freeze.removePotionEffect(PotionEffectType.SLOW);
@@ -79,7 +79,7 @@ public class commands {
 					  freeze.setFlying(false);
 					  tutil.setStill(freeze, false);
 				  }else{
-					  player.sendTitle("§cYou have been frozen.", "§eDo not log out or you will be permanently banned.");
+					  player.sendTitle("Â§cYou have been frozen.", "Â§eDo not log out or you will be permanently banned.");
 					  freeze.setMetadata(freeze.getName(), new FixedMetadataValue(plugin, true));
 					  freeze.addPotionEffect(new PotionEffect(PotionEffectType.SLOW,100000,254));
 					  freeze.closeInventory();
